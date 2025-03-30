@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <h1>🔒 Admin Panel</h1>
+        <p>Enter a new game link:</p>
+        <input type="text" id="gameInput" placeholder="https://www.roblox.com">
+        <button onclick="updateGameLink()" class="update-button">Confirm</button>
+
+        <button onclick="location.href='index.html'" class="back-button">⬅ Back to Main Menu</button>
+    </div>
+
+    <script>
+        function updateGameLink() {
+            let newLink = document.getElementById("gameInput").value;
+            localStorage.setItem("latestGameLink", newLink);
+            alert("Game link updated!");
+        }
+    </script>
+</body>
+</html>
